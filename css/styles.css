@@ -1,4 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: coral;
+  font-family: "Alata", arial;
+  font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.about--section {
+  padding: 1em;
+}
+
+.picture .about__img {
+  width: 100%;
+}
+
+.creations--section {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.creations--section .creations-content--wrap {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.creations--section .creations-content--wrap .creations-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+@media only screen and (min-width: 850px) {
+  .creations--section .creations-content--wrap .creations-grid {
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.creations--section .creations-content--wrap .creations-grid .grid-items {
+  position: relative;
+  cursor: pointer;
+}
+
+.creations--section .creations-content--wrap .creations-grid .grid-items::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.315);
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+}
+
+@media only screen and (min-width: 850px) {
+  .creations--section .creations-content--wrap .creations-grid .grid-items:hover::after {
+    background: rgba(255, 255, 255, 0.603);
+  }
+  .creations--section .creations-content--wrap .creations-grid .grid-items:hover .grid-item__h3 {
+    color: black;
+  }
+}
+
+.creations--section .creations-content--wrap .creations-grid .grid-items .grid-item__h3 {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: white;
+  font-size: clamp(2.6rem, 4vw, 3.2rem);
+  max-width: 9ch;
+  z-index: 2;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.creations--section .creations-content--wrap .creations-grid .grid-items .the-grid--h3 {
+  max-width: 7ch;
+}
+
+.creations--section .creations-content--wrap .creations-grid .grid-items .grid-picture img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
