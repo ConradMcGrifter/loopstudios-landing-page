@@ -2,7 +2,7 @@
     grid-area: header;
     background: url("../images/mobile/image-hero.jpg") no-repeat;
     background-size: cover;
-    padding: 3em $padding;
+    padding: 4em $padding 0 $padding;
     display: flex;
     justify-content: center;
 
@@ -63,12 +63,12 @@
 
             .h1--wrap {
                 border: solid white 2px;
-                margin-bottom: 3rem;
-                padding: 1.5em 1.5em 1em 1.5em;
+                margin-bottom: 7rem;
+                padding: 1.75em 1.75em 1.25em 1.75em;
 
                 @include desktopSize {
                     max-width: 59%;
-                    margin-bottom: 0;
+                    margin-bottom: 3rem;
                 }
                 .header__h1 {
                     color: white;

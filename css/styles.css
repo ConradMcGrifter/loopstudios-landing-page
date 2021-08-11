@@ -49,8 +49,8 @@ li {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 650px auto 300px;
-      grid-template-rows: 650px auto 300px;
+  -ms-grid-rows: 65rem auto 30rem;
+      grid-template-rows: 65rem auto 30rem;
       grid-template-areas: "header" "main" "footer";
 }
 
@@ -66,7 +66,7 @@ main {
   grid-area: header;
   background: url("../images/mobile/image-hero.jpg") no-repeat;
   background-size: cover;
-  padding: 3em 1.5em;
+  padding: 4em 1.5em 0 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,7 +98,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 1100px;
+  max-width: 74em;
 }
 
 .header .header-content--wrap .nav {
@@ -163,14 +163,14 @@ main {
 
 .header .header-content--wrap .hero--section .h1--wrap {
   border: solid white 2px;
-  margin-bottom: 3rem;
-  padding: 1.5em 1.5em 1em 1.5em;
+  margin-bottom: 7rem;
+  padding: 1.75em 1.75em 1.25em 1.75em;
 }
 
 @media only screen and (min-width: 850px) {
   .header .header-content--wrap .hero--section .h1--wrap {
     max-width: 59%;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
 }
 
@@ -214,7 +214,7 @@ main {
 
 .creations--section .creations-content--wrap {
   width: 100%;
-  max-width: 1100px;
+  max-width: 74em;
 }
 
 .creations--section .creations-content--wrap .creations-grid {

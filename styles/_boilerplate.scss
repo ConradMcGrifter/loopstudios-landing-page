@@ -44,7 +44,7 @@ li {
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 650px auto 300px;
+    grid-template-rows: 65rem auto 30rem;
     grid-template-areas: "header" "main" "footer";
 
     // @include desktopSize {
