@@ -176,7 +176,8 @@ main {
 
 .header .header-content--wrap .hero--section .h1--wrap .header__h1 {
   color: white;
-  max-width: 12ch;
+  font-weight: 400;
+  max-width: 11ch;
   font-size: clamp(4rem, 7vw, 7rem);
   line-height: 1;
 }
@@ -281,5 +282,14 @@ footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
+  background: black;
+}
+
+footer .logo-links__ul .logo-links__li .footer__links {
+  color: white;
+}
+
+footer .copyright {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
