@@ -19,6 +19,10 @@ body {
     font-family: $font-stack--text;
     font-size: 1.5rem;
     height: 100%;
+
+    &.display {
+        overflow: hidden;
+    }
 }
 
 h1,
