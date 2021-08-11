@@ -138,6 +138,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Alata", arial;
 }
 
 .header .header-content--wrap .nav .nav-ul--wrap.active {
@@ -157,10 +158,12 @@ main {
   background: black;
   font-size: 3rem;
   text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 @media only screen and (min-width: 850px) {
   .header .header-content--wrap .nav .nav-ul--wrap.active.active {
+    font-family: "Alata", arial;
     background: none;
     position: relative;
     font-size: unset;

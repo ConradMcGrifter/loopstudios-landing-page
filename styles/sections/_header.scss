@@ -40,6 +40,7 @@
                 width: 100%;
                 display: flex;
                 align-items: center;
+                font-family: $font-stack--text;
 
                 &.active {
                     display: flex;
@@ -54,9 +55,11 @@
                     background: black;
                     font-size: 3rem;
                     text-transform: uppercase;
+                    font-family: $font-stack--header;
 
                     @include desktopSize {
                         &.active {
+                            font-family: $font-stack--text;
                             background: none;
                             position: relative;
                             font-size: unset;
