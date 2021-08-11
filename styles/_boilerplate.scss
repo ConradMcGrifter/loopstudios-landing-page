@@ -36,12 +36,20 @@ img {
     display: block;
 }
 
+li {
+    list-style-type: none;
+}
+
 .website-grid {
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 650px auto 300px;
+    grid-template-rows: 650px auto 300px;
     grid-template-areas: "header" "main" "footer";
+
+    // @include desktopSize {
+    //     grid-template-rows: 650px auto 300px;
+    // }
 }
 
 main {

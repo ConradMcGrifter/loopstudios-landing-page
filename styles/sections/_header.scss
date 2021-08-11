@@ -2,9 +2,85 @@
     grid-area: header;
     background: url("../images/mobile/image-hero.jpg") no-repeat;
     background-size: cover;
+    padding: 3em $padding;
+    display: flex;
+    justify-content: center;
 
     @include desktopSize {
-        background: url("../images/desktop/image-hero.jpg") no-repeat right;
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+            url("../images/desktop/image-hero.jpg") no-repeat right;
         background-size: cover;
+    }
+
+    .header-content--wrap {
+        @include flexCenter(column);
+        // height: 100%;
+        width: 100%;
+        max-width: $max-width;
+
+        .nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include desktopSize {
+                flex-wrap: unset;
+            }
+
+            .nav__ul {
+                width: 100%;
+                display: none;
+
+                @include desktopSize {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .nav__li {
+                    & + .nav__li {
+                        margin-left: 2em;
+                    }
+                    .nav__a {
+                        color: white;
+                    }
+                }
+            }
+
+            #hamburger-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                @include desktopSize {
+                    display: none;
+                }
+            }
+        }
+        .hero--section {
+            margin: auto 0;
+            width: 100%;
+
+            .h1--wrap {
+                border: solid white 2px;
+                margin-bottom: 3rem;
+                padding: 1.5em 1.5em 1em 1.5em;
+
+                @include desktopSize {
+                    max-width: 59%;
+                    margin-bottom: 0;
+                }
+                .header__h1 {
+                    color: white;
+                    max-width: 12ch;
+                    font-size: clamp(4rem, 7vw, 7rem);
+                    line-height: 1;
+
+                    @include desktopSize {
+                        max-width: 15ch;
+                    }
+                }
+            }
+        }
     }
 }
