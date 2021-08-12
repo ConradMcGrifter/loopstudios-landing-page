@@ -33,6 +33,7 @@ h2,
 h3 {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 a {
@@ -236,7 +237,7 @@ main {
 @media only screen and (min-width: 850px) {
   .header .header-content--wrap .nav .nav-ul--wrap .nav__ul .nav__li + .nav__li {
     margin-top: 0;
-    margin-left: 1.75em;
+    margin-left: 2em;
   }
   .header .header-content--wrap .nav .nav-ul--wrap .nav__ul .nav__li::after {
     content: "";
@@ -482,6 +483,7 @@ main {
 
 @media only screen and (min-width: 850px) {
   .creations--section .creations__header {
+    margin-bottom: 5em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

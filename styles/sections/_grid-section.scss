@@ -17,6 +17,7 @@
         }
 
         @include desktopSize {
+            margin-bottom: 5em;
             display: flex;
             align-items: center;
             justify-content: space-between;
