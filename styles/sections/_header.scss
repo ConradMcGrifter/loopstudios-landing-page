@@ -38,11 +38,18 @@
 
             .nav-ul--wrap {
                 width: 100%;
-                display: flex;
+                // display: flex;
+                visibility: hidden;
                 align-items: center;
                 font-family: $font-stack--text;
+                transition: background 0.25s;
+
+                @include desktopSize {
+                    visibility: visible;
+                }
 
                 &.active {
+                    visibility: visible;
                     display: flex;
                     justify-content: center;
                     padding: $padding;
@@ -72,13 +79,20 @@
                 .nav__ul {
                     width: 100%;
                     display: none;
+                    // visibility: hidden;
+
+                    // @include desktopSize {
+                    //     display: flex;
+                    // }
 
                     &.active {
+                        // visibility: visible;
                         display: flex;
                         flex-direction: column;
 
                         @include desktopSize {
                             flex-direction: row;
+                            display: flex;
                         }
                     }
 
@@ -89,7 +103,7 @@
 
                     .nav__li {
                         & + .nav__li {
-                            margin-top: 0.5em;
+                            margin-top: 1em;
                         }
 
                         @include desktopSize {
@@ -114,6 +128,22 @@
                 z-index: 999;
 
                 @include desktopSize {
+                    display: none;
+                }
+            }
+
+            #x-img {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+
+            #hamburger-img {
+                display: block;
+
+                &.display {
                     display: none;
                 }
             }
