@@ -40,6 +40,7 @@
                 align-items: center;
                 font-family: $font-stack--text;
                 transition: background 0.25s;
+                font-size: 1.6rem;
 
                 @include desktopSize {
                     visibility: visible;
@@ -66,7 +67,7 @@
                             font-family: $font-stack--text;
                             background: none;
                             position: relative;
-                            font-size: unset;
+                            font-size: initial;
                             text-transform: unset;
                             padding: 0;
                         }
@@ -93,6 +94,7 @@
                     }
 
                     .nav__li {
+                        position: relative;
                         & + .nav__li {
                             margin-top: 1em;
                         }
@@ -100,7 +102,22 @@
                         @include desktopSize {
                             & + .nav__li {
                                 margin-top: 0;
-                                margin-left: 2em;
+                                margin-left: 1.75em;
+                            }
+
+                            &::after {
+                                content: "";
+                                width: 0%;
+                                height: 0.2rem;
+                                background: white;
+                                position: absolute;
+                                bottom: -0.5rem;
+                                left: 0;
+                                transition: width 0.25s ease;
+                            }
+
+                            &:hover::after {
+                                width: 100%;
                             }
                         }
 

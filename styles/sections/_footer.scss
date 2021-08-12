@@ -35,12 +35,28 @@ footer {
             }
             .logo-links__li {
                 margin-top: 2rem;
+                position: relative;
 
                 @include desktopSize {
                     margin-top: 0;
 
                     & + .logo-links__li {
                         margin-left: 2rem;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 0%;
+                        height: 0.2rem;
+                        background: white;
+                        position: absolute;
+                        bottom: -0.5rem;
+                        left: 0;
+                        transition: width 0.25s ease;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
                     }
                 }
 
@@ -65,12 +81,30 @@ footer {
 
         .social__ul {
             display: flex;
+            align-items: center;
 
             .social__li {
+                position: relative;
+
                 & + .social__li {
                     margin-left: 1.5rem;
                 }
-                .social__img {
+
+                @include desktopSize {
+                    &::after {
+                        content: "";
+                        width: 0%;
+                        height: 0.2rem;
+                        background: white;
+                        position: absolute;
+                        bottom: -0.5rem;
+                        left: 0;
+                        transition: width 0.25s ease;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
                 }
             }
         }

@@ -48,12 +48,12 @@ li {
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 65rem auto 15rem;
+    grid-template-rows: 65rem auto auto;
     grid-template-areas: "header" "main" "footer";
 
-    // @include desktopSize {
-    //     grid-template-rows: 650px auto 300px;
-    // }
+    @include desktopSize {
+        grid-template-rows: 650px auto 15rem;
+    }
 }
 
 main {

@@ -53,9 +53,16 @@ li {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 65rem auto 15rem;
-      grid-template-rows: 65rem auto 15rem;
+  -ms-grid-rows: 65rem auto auto;
+      grid-template-rows: 65rem auto auto;
       grid-template-areas: "header" "main" "footer";
+}
+
+@media only screen and (min-width: 850px) {
+  .website-grid {
+    -ms-grid-rows: 650px auto 15rem;
+        grid-template-rows: 650px auto 15rem;
+  }
 }
 
 main {
@@ -139,6 +146,7 @@ main {
   font-family: "Alata", arial;
   -webkit-transition: background 0.25s;
   transition: background 0.25s;
+  font-size: 1.6rem;
 }
 
 @media only screen and (min-width: 850px) {
@@ -173,7 +181,7 @@ main {
     font-family: "Alata", arial;
     background: none;
     position: relative;
-    font-size: unset;
+    font-size: initial;
     text-transform: unset;
     padding: 0;
   }
@@ -217,6 +225,10 @@ main {
   }
 }
 
+.header .header-content--wrap .nav .nav-ul--wrap .nav__ul .nav__li {
+  position: relative;
+}
+
 .header .header-content--wrap .nav .nav-ul--wrap .nav__ul .nav__li + .nav__li {
   margin-top: 1em;
 }
@@ -224,7 +236,21 @@ main {
 @media only screen and (min-width: 850px) {
   .header .header-content--wrap .nav .nav-ul--wrap .nav__ul .nav__li + .nav__li {
     margin-top: 0;
-    margin-left: 2em;
+    margin-left: 1.75em;
+  }
+  .header .header-content--wrap .nav .nav-ul--wrap .nav__ul .nav__li::after {
+    content: "";
+    width: 0%;
+    height: 0.2rem;
+    background: white;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    -webkit-transition: width 0.25s ease;
+    transition: width 0.25s ease;
+  }
+  .header .header-content--wrap .nav .nav-ul--wrap .nav__ul .nav__li:hover::after {
+    width: 100%;
   }
 }
 
@@ -307,7 +333,7 @@ main {
 
 @media only screen and (min-width: 850px) {
   .about--section {
-    padding: 10rem 2rem;
+    padding: 15rem 2rem;
   }
 }
 
@@ -425,7 +451,7 @@ main {
 }
 
 .creations--section {
-  padding: 3rem 2rem 7rem 2rem;
+  padding: 3rem 2rem 8rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,6 +463,12 @@ main {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+@media only screen and (min-width: 850px) {
+  .creations--section {
+    padding: 4rem 2rem 18rem 2rem;
+  }
 }
 
 .creations--section .creations__header {
@@ -648,6 +680,7 @@ footer .logo-links--wrap .footer__logo {
 
 footer .logo-links--wrap .logo-links__ul .logo-links__li {
   margin-top: 2rem;
+  position: relative;
 }
 
 @media only screen and (min-width: 850px) {
@@ -656,6 +689,20 @@ footer .logo-links--wrap .logo-links__ul .logo-links__li {
   }
   footer .logo-links--wrap .logo-links__ul .logo-links__li + .logo-links__li {
     margin-left: 2rem;
+  }
+  footer .logo-links--wrap .logo-links__ul .logo-links__li::after {
+    content: "";
+    width: 0%;
+    height: 0.2rem;
+    background: white;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    -webkit-transition: width 0.25s ease;
+    transition: width 0.25s ease;
+  }
+  footer .logo-links--wrap .logo-links__ul .logo-links__li:hover::after {
+    width: 100%;
   }
 }
 
@@ -693,10 +740,34 @@ footer .social-links-copyright--wrap .social__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social-links-copyright--wrap .social__ul .social__li {
+  position: relative;
 }
 
 footer .social-links-copyright--wrap .social__ul .social__li + .social__li {
   margin-left: 1.5rem;
+}
+
+@media only screen and (min-width: 850px) {
+  footer .social-links-copyright--wrap .social__ul .social__li::after {
+    content: "";
+    width: 0%;
+    height: 0.2rem;
+    background: white;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    -webkit-transition: width 0.25s ease;
+    transition: width 0.25s ease;
+  }
+  footer .social-links-copyright--wrap .social__ul .social__li:hover::after {
+    width: 100%;
+  }
 }
 
 footer .social-links-copyright--wrap .copyright {

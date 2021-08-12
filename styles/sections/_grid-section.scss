@@ -1,9 +1,13 @@
 .creations--section {
-    padding: 3rem $padding 7rem $padding;
+    padding: 3rem $padding 8rem $padding;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+
+    @include desktopSize {
+        padding: 4rem $padding 18rem $padding;
+    }
 
     .creations__header {
         margin-bottom: 3em;
