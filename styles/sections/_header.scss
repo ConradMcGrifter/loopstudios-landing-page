@@ -15,7 +15,6 @@
 
     .header-content--wrap {
         @include flexCenter(column);
-        // height: 100%;
         width: 100%;
         max-width: $max-width;
 
@@ -32,8 +31,6 @@
             .nav__logo {
                 position: relative;
                 z-index: 999;
-                // max-width: 192px;
-                // height: 32px;
             }
 
             .nav-ul--wrap {
@@ -79,14 +76,8 @@
                 .nav__ul {
                     width: 100%;
                     display: none;
-                    // visibility: hidden;
-
-                    // @include desktopSize {
-                    //     display: flex;
-                    // }
 
                     &.active {
-                        // visibility: visible;
                         display: flex;
                         flex-direction: column;
 
