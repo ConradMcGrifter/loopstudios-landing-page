@@ -1,10 +1,79 @@
 .about--section {
-    padding: $padding;
-}
+    padding: 7rem $padding;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
-.picture {
-    .about__img {
-        width: 100%;
-        max-width: 600px;
+    @include desktopSize {
+        padding: 10rem $padding;
+    }
+
+    .about__content-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include desktopSize {
+            grid-template-columns: 1.5fr 16rem 1fr;
+            max-width: $max-width;
+        }
+
+        .about__info--container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            @include desktopSize {
+                grid-column: 2 / 4;
+                grid-row: 1 / 2;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            .about__info--wrap {
+                @include flexCenter(column);
+                padding: 0;
+                text-align: center;
+                background: color(white);
+                margin-top: 4rem;
+
+                @include desktopSize {
+                    text-align: unset;
+                    padding: 3em 0 0 3em;
+                }
+
+                @media only screen and (min-width: 1000px) {
+                    padding: 6em 0 0 6em;
+                }
+
+                .info__h2 {
+                    font-size: clamp(3.2rem, 4vw, 4.5rem);
+                    margin-bottom: 0.5em;
+                    line-height: 1;
+                }
+
+                .info__p {
+                    color: color(very-dark-gray);
+                    line-height: 1.6;
+
+                    // this media query is used to make the paragraph max-width match the design
+                    @media only screen and (max-width: 414px) {
+                        max-width: 30ch;
+                    }
+
+                    @include desktopSize {
+                        max-width: 46ch;
+                    }
+                }
+            }
+        }
+
+        .picture {
+            width: 100%;
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            .about__img {
+                width: 100%;
+                // max-width: 600px;
+            }
+        }
     }
 }
