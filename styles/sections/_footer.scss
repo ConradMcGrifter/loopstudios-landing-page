@@ -1,16 +1,87 @@
 footer {
     grid-area: footer;
     background: color(black);
+    padding: 4rem $padding;
+    display: flex;
+    justify-content: center;
 
-    .logo-links__ul {
-        .logo-links__li {
-            .footer__links {
-                color: white;
+    .footer__content--wrap {
+        width: 100%;
+        max-width: $max-width;
+
+        @include desktopSize {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .logo-links--wrap {
+        text-align: center;
+
+        @include desktopSize {
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .footer__logo {
+            display: inline-block;
+            width: 12rem;
+        }
+
+        .logo-links__ul {
+            @include desktopSize {
+                display: flex;
+            }
+            .logo-links__li {
+                margin-top: 2rem;
+
+                @include desktopSize {
+                    margin-top: 0;
+
+                    & + .logo-links__li {
+                        margin-left: 2rem;
+                    }
+                }
+
+                .footer__links {
+                    color: white;
+                }
             }
         }
     }
 
-    .copyright {
-        color: color(white);
+    .social-links-copyright--wrap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 4rem;
+
+        @include desktopSize {
+            margin-top: 0;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .social__ul {
+            display: flex;
+
+            .social__li {
+                & + .social__li {
+                    margin-left: 1.5rem;
+                }
+                .social__img {
+                }
+            }
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            color: color(very-dark-gray);
+
+            @include desktopSize {
+                margin-top: 0;
+            }
+        }
     }
 }
