@@ -53,7 +53,7 @@ li {
     grid-template-areas: "header" "main" "footer";
 
     @include desktopSize {
-        grid-template-rows: 650px auto 15rem;
+        grid-template-rows: 65rem auto 15rem;
     }
 }
 
